@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(248, 199, 208) 30%, rgb(172, 113, 180) 70%);
+    display: flex;
+    justify-content: center;
+}
+
+.player-0-div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    height: 100%; 
+    width: 35%; 
+    background: linear-gradient(135deg,rgb(214, 180, 186) 30%,rgb(203, 162, 170) 70%);
+}
+.player-1-div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    height: 100%; 
+    width: 35%; 
+    background: linear-gradient(135deg,rgb(211, 179, 214) 30%,rgb(213, 134, 222) 70%);
+
+}
+
+#instructions-container{
+background-color: white;
+height: 80%;
+width: 90%;
+position: relative;
+top: 10%;
+left: 10%;
+
+}
+#instructions-container::after{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    content: ' ';
+    top: 10%;
+    left: 100%;
+}
+
+#bottom-div{
+    /* background-color: palevioletred; */
+    width: 30%;
+    height: 15%;
+    align-items: center;
+    position: relative;
+    left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#players{
+    font-size: 200%;
+    font-weight: bold;
+    padding: 10%;
+}
+
+#current{
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#score-current-player-1{
+    font-size: 200%;
+}
+
+#score-current-player-0{
+    font-size: 200%;
+}
+
+#score-player-0{
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+#score-player-1{
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+#middle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    right: 40%;
+    top: 10%;
+    height: 80%;
+}
+button{
+    height: 6%;
+    width: 120%;
+    opacity: 0.8;
+    border: none;
+    padding: 10% 10%;
+}
+
+#dice-top{
+    height: 15%;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    left: 20%;
+    /* margin: auto; */
+}
+
+#dice-bottom{
+    height: 15%;
+    width: 100%;
+    position: relative;
+    left: 20%;
+    background-color: white;
+    /* margin: auto; */
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}

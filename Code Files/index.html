@@ -5,12 +5,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Dice Game</title>
 </head>
 
 <body>
-    <h1> LET THE PARTY BEGIN 🎉💃 !!!!!!!!!!!!!! </h1>
+    <!-- <div id="game-background">
+
+        <div id="instructions-container">
+                <div id="top-container-p1">
+                    <h2>Game Instructions:</h2>
+                    <ul>
+                        <li id="li-p1">In your turn - roll the dice (at least once) and accumulate the result in "current"</li>
+                        <li id="li-p1">You can roll again or click "Hold" to save the points from "Current" and end the turn. </li>
+                        <li id="li-p1">Note! if you get 6-6 - you will lose all points from "current" and the turn will go to your opponent </li>
+                        <li id="li-p1">If you managed to reach exactly the target score - you win! if you passed it - you loose ....</li>
+                    </ul>
+                </div>
+
+                <div id="bottom-container-p1">
+                    <h2>Please select a target score</h2>
+                    <div id="input-target-score-p1"></div>
+                    <div id="input-start-game-p1"></div>
+                </div>
+
+            </div>
+        </div> -->
+
+        <!-- Player 1 side -->
+        <section class="player player-0-div player-active">
+            <div id="top-div">
+                <p id="players">PLAYER 1</p>
+                <p id="score-player-0"></p>
+            </div>
+
+            <div id="bottom-div">
+                <p id="current">current</p>
+                <p id="score-current-player-0">0</p>
+            </div>
+        </section>
+
+        <!-- Player 2 side -->
+            <section class="player-1-div player">
+                    <div id="top-div">
+                        <p id="players">PLAYER 2</p>
+                        <p id="score-player-1">0</p>
+                    </div>
+        
+                    <div id="bottom-div">
+                        <p id="current">current</p>
+                        <p id="score-current-player-1"></p>
+                    </div>
+            </section>
+
+        <div id="middle-container">
+            <img src="/img/dice/dice-1.png" id="dice-top">
+            <img src="/img/dice/dice-1.png" id="dice-bottom">
+            <button id="new-game">🔁New Game</button>
+            <button id="roll-dice">🎲 Roll Dice</button>
+            <button id="hold"> ⏹️ Hold</button>
+            
+
+
+        </div>
+        <script src="./script.js"></script>
 </body>
 
 </html>
