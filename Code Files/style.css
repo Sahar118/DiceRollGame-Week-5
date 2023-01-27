@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -17,9 +18,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
+    /* position: relative; */
     height: 100%; 
     width: 35%; 
+    opacity: 0.4;
     background: linear-gradient(135deg,rgb(214, 180, 186) 30%,rgb(203, 162, 170) 70%);
 }
 .player-1-div{
@@ -27,9 +29,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    position: relative;
+    /* position: relative; */
     height: 100%; 
     width: 35%; 
+    opacity: 0.4;
     background: linear-gradient(135deg,rgb(211, 179, 214) 30%,rgb(213, 134, 222) 70%);
 
 }
@@ -134,4 +137,21 @@ img{
     height: 100%;
     width: 100%;
     z-index: 1;
+}
+
+.winner{
+    background: black;
+    opacity: 1;
+    color: yellowgreen;
+    color: red;
+    font-weight: 700;
+
+}
+
+.player-active{
+opacity: 1;
+}
+
+.hidden{
+    display: none;
 }
