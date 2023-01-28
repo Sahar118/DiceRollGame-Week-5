@@ -17,7 +17,9 @@ const modal = document.getElementById("myModal");
 const newGameBtn1 = document.getElementById("new-game-btn");
 const startGameBtn = document.getElementById("letStart");
 const turnOffSound = document.querySelector('.turn-off-sound')
-const targetScore = document.getElementById('targetScore').valueAsNumber;
+const textPlayerWon0= document.querySelector('.player-0-won-text')
+const textPlayerWon1= document.querySelector('.player-1-won-text')
+
 
 
 let POP_SOUND= new Audio('/audio/mixkit-bonus-earned-in-video-game-2058.wav');
@@ -63,6 +65,8 @@ const startNewGame = function (){
 }
 startNewGame()
 const switchPlayer = function(){
+    textPlayerWon1.style.display = 'none';
+    textPlayerWon0.style.overFlow = 'none';
     document.getElementById(`score-current-player-${playerNum}`).textContent = 0;
     currentScore1=0;
     playerNum = playerNum === 0 ? 1 : 0; 
@@ -118,14 +122,15 @@ const gameOve = holdBtn.addEventListener('click', function(){
     if(playingStatus){
         score[playerNum]+= currentScore1;
         document.getElementById(`score-player-${playerNum}`).textContent =score[playerNum];
+        
         cong_Sound.play();
         
-        if (score[playerNum]<targetScore){
+        if (score[playerNum]<100){
             switchPlayer()
             cong_Sound.play();
             
         }
-        else if(score[playerNum]===targetScore){
+        else if(score[playerNum]===100){
             playingStatus=false;
             winNum += 1
             document.querySelector(`.player-${playerNum}-div`).classList.add('winner');
@@ -142,8 +147,8 @@ const gameOve = holdBtn.addEventListener('click', function(){
                 document.querySelector(`.player-1-div`).classList.add('winner');
                 document.querySelector(`.player-0-div`).classList.remove('player-active');
                 document.getElementById(`winCount-1`).textContent = winNum;
+                textPlayerWon1.style.display = 'block';
                 cong_Sound.play();
-                
             }
             else{
                 playingStatus=false;
@@ -152,6 +157,8 @@ const gameOve = holdBtn.addEventListener('click', function(){
                 document.querySelector(`.player-0-div`).classList.add('winner');
                 document.querySelector(`.player-1-div`).classList.remove('player-active');
                 document.getElementById(`winCount-0`).textContent = winNum;
+                textPlayerWon0.style.display = 'block';
+
                 cong_Sound.play();
                 
             }

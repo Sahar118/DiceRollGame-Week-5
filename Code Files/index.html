@@ -30,7 +30,7 @@
             </div>
             <div class="modal-footer">
                 <h3>Please select a target score</h3>
-                <input type="number" id="targetScore" name="targetScore" >
+                <input type="number" id="'targetScore'" name="targetScore" min="20" max="1000" value="20" autofocus onblur="getVal()">
                 <button id="letStart" id="button-start-game-modal">🎲  START GAME </button>
           </div> 
         </div>
@@ -41,6 +41,7 @@
 
             <section class="player-0-div player-active">
                 <div id="top-div">
+                    <div class="player-0-won-text textHidden">YOU WIN!!! 🎉</div>
                     <p id="players">PLAYER 1</p>
                     <p id="score-player-0"></p>
                 </div>
@@ -58,6 +59,7 @@
             <!-- Player 2 side -->
                 <section class="player-1-div">
                         <div id="top-div">
+                            <div class="player-1-won-text textHidden">YOU WIN!!! 🎉</div>
                             <p id="players">PLAYER 2</p>
                             <p id="score-player-1">0</p>
                         </div>
@@ -74,9 +76,10 @@
         </div>
 
         <div id="middle-container">
+            
+            <button id="new-game">🔁New Game</button>
             <img src="/img/dice/dice-1.png" id="dice-top" class="dice">
             <img src="/img/dice/dice-1.png" id="dice-bottom" class="dice">
-            <button id="new-game">🔁New Game</button>
             <button id="roll-dice">🎲 Roll Dice</button>
             <button id="hold"> ⏹️ Hold</button>
             <!-- <button class="sounds turn-on-sound" onclick="playAudio('/audio/mixkit-bonus-earned-in-video-game-2058.wav')">🔊</button>
