@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="modal.html">
     <title>Dice Game</title>
 
 </head>
@@ -14,38 +13,28 @@
 <body>
 
     <!-- modal  -->
-    <div class="modal hidden" >
-        <button class="close-modal">&times; </button>
-    
-        <h2>Game Instructions:</h2>
-        <!-- <div class="modal-body"> -->
-            <ul>
-                <li id="li-p1">In your turn - roll the dice (at least once) and accumulate the result in "current"</li>
-                <li id="li-p1">You can roll again or click "Hold" to save the points from "Current" and end the turn. </li>
-                <li id="li-p1">Note! if you get 6-6 - you will lose all points from "current" and the turn will go to your opponent </li>
-                <li id="li-p1">If you managed to reach exactly the target score - you win! if you passed it - you loose ....</li>
-            </ul>
 
-            
-            <!-- </div> -->
-            
-            <!-- <div class="modal-footer"> -->
-                <!-- <h2>Please select a target score</h2>
-                <input type="number" id="input-target-score-p1" min="2" max="1000"></input>
-                <button id="button-send" type="submit"></button> -->
-    
-                <!-- <form name="myForm" >
-    
-                    <input id="number" type="number" name="number" required>
-                    <input id="startGame" type="submit" value=" START GAME 🎲" href="#"> 
-                  </form>
-                   -->
-                <!-- </div> -->
-                
+    <div id="myModal" class="modal hidden">
+        <div class="modal-content" >
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2 class="game-inst">Game Instructions:</h2>
             </div>
-                <div class="overlay hidden"></div>
+            <div class="modal-body">
+                <ul>
+                    <li id="li-p1">In your turn - roll the dice (at least once) and accumulate the result in "current"</li>
+                    <li id="li-p1">You can roll again or click "Hold" to save the points from "Current" and end the turn. </li>
+                    <li id="li-p1">Note! if you get 6-6 - you will lose all points from "current" and the turn will go to your opponent </li>
+                    <li id="li-p1">If you managed to reach exactly the target score - you win! if you passed it - you loose ....</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <h3>Please select a target score</h3>
+                <input type="number" id="targetScore" name="targetScore" >
+                <button id="letStart" id="button-start-game-modal">🎲  START GAME </button>
+          </div> 
+        </div>
     </div>
-                
 
         <!-- Player 1 side -->
         <div class="container">
@@ -93,8 +82,6 @@
             <!-- <button class="sounds turn-on-sound" onclick="playAudio('/audio/mixkit-bonus-earned-in-video-game-2058.wav')">🔊</button>
             <button class="sounds turn-off-sound" onclick="stopAudio()">🔈</button> -->
         </div>
-
-
 
 
         <script src="./script.js"></script>

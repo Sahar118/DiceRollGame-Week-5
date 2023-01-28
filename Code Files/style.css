@@ -14,14 +14,15 @@ body {
     justify-content: center;
     font-family: 'Merienda', cursive;
 }
+
 .container{
     height: 80%;
-    width: 70%;
+    width: 68%;
     display: flex;
     position: relative;
     top: 50px; 
     box-shadow: -2.5px 2.5px 5px 10px #fb7185;
-
+    left:6%;
 }
 
 
@@ -45,7 +46,7 @@ body {
     height: 100%; 
     width: 50%; 
     opacity: 0.4;
-    background: linear-gradient(135deg,#fda4af 30%,#fff1f2 70%)
+    background: linear-gradient(135deg, #fff1f2 30%,#fda4af 70%)
 }
 
 #instructions-container{
@@ -114,8 +115,8 @@ left: 10%;
     justify-content: space-around;
     align-content: center;
     position: relative;
-    right: 40%;
-    top: 20%;
+    right: 33.5%;
+    top: 15%;
     height: 70%;
     width: 9%;
 }
@@ -161,8 +162,8 @@ button{
     }
   }
 #dice-top{
-    height: 12%;
-    width: 75%;
+    height: 15%;
+    width: 60%;
     background-color: white;
     position: relative;
     left: 20%;
@@ -170,8 +171,8 @@ button{
 }
 
 #dice-bottom{
-    height: 12%;
-    width: 75%;
+    height: 15%;
+    width: 60%;
     position: relative;
     left: 20%;
     background-color: white;
@@ -185,9 +186,9 @@ img{
 }
 
 .winner{
-    background: black;
+    background: #fca5a5;
     opacity: 1;
-    color: red;
+    color: #9f1239;
     font-weight: 700;
 }
 
@@ -241,39 +242,61 @@ opacity: 1;
 }
 
 
-
-
 /* modal */
-   .hidden{
-    display: none;
+    .hidden{
+        display:block;
+    }
+
+    .modal{
+        position:fixed;
+        top: 3.50rem;
+        left: 14.5rem;
+        width: 67%;
+        height: 78%;
+        background-color: #fb7185;
+        border-radius: 5px;
+        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+        z-index: 3;
+    }
+
+    .modal-body{
+        line-height: 270%;
+        padding-left: 5%;
+    }
+    .game-inst{
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+   h3{
+    margin-bottom: 2rem;
    }
+    .modal-footer{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
-   .modal{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
+    #targetScore{
+        margin-bottom: 1rem;
+        text-align: center;
+        padding: .75%;
+    }
+#button-start-game-modal{
+    height: 1%;
+    width: 15%;
+    margin: 5px;
+    padding: 10px;
+    font-size: 10px; 
+    display: flex;
+    text-align: center;
+}
 
-    background-color: crimson;
-    padding:  6rem ;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
-   }
-
-   .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-
-   }
-
-
-   @media (max-width:800px) {
+@media (max-width:800px) {
     #middle-container{
         display: flex;
         flex-direction: row;
@@ -283,24 +306,13 @@ opacity: 1;
         top: 2%;
     }
 
-    button{
-
-        width: 100%;
-        height: 40%;
-        opacity: 0.7;
-        border-radius: 20px;
-        border: none;
-        padding: 10% 10%;
-        cursor: pointer;
-        position: relative;
-    }
     #dice-top{
         height:30%;
         width: 75%;
         background-color: white;
         position: relative;
         left: -25%;
-        /* margin: auto; */
+
     }
     
     #dice-bottom{
@@ -309,9 +321,5 @@ opacity: 1;
         position: relative;
         left: -20%;
         background-color: white;
-        /* margin: auto; */
     }
-    
-    
-    
-   }
+}

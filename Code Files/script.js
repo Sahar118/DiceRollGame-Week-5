@@ -13,13 +13,19 @@ const rollDiceBtn = document.querySelector('#roll-dice');
 const holdBtn = document.querySelector('#hold');
 const winner0=  document.querySelector('#winCount-0');
 const winner1=  document.querySelector('#winCount-1');
-
+const modal = document.getElementById("myModal");
+const newGameBtn1 = document.getElementById("new-game-btn");
+const startGameBtn = document.getElementById("letStart");
 const turnOffSound = document.querySelector('.turn-off-sound')
+const targetScore = document.getElementById('targetScore').valueAsNumber;
+
 
 let POP_SOUND= new Audio('/audio/mixkit-bonus-earned-in-video-game-2058.wav');
 POP_SOUND.volume = 0.1;
 let cong_Sound = new Audio('/audio/TCD25PS-game-success (1).mp3');
 cong_Sound.volume = 0.1;
+
+
 
 // 
 scorePlayer0.textContent=0;
@@ -27,7 +33,13 @@ scorePlayer1.textContent=0;
 scoreCurrent0.textContent=0;
 scoreCurrent1.textContent=0;
 
+startGameBtn.onclick = function(){
+    modal.style.display='none';
+};
 
+startGameBtn.addEventListener('click', function(e){
+    targetScore = document.getElementById('targetScore').valueAsNumber;
+});
 let score, playerNum, currentScore1, playingStatus;
 // 
 const startNewGame = function (){
@@ -60,8 +72,6 @@ const switchPlayer = function(){
     POP_SOUND.play();
     
 }
-
-
 
 
 const gameFun = rollDiceBtn.addEventListener('click', function(){
@@ -110,12 +120,12 @@ const gameOve = holdBtn.addEventListener('click', function(){
         document.getElementById(`score-player-${playerNum}`).textContent =score[playerNum];
         cong_Sound.play();
         
-        if (score[playerNum]<100){
+        if (score[playerNum]<targetScore){
             switchPlayer()
             cong_Sound.play();
             
         }
-        else if(score[playerNum]===100){
+        else if(score[playerNum]===targetScore){
             playingStatus=false;
             winNum += 1
             document.querySelector(`.player-${playerNum}-div`).classList.add('winner');
@@ -150,4 +160,11 @@ const gameOve = holdBtn.addEventListener('click', function(){
     }})
     newGameBtn.addEventListener('click', startNewGame);
     
+    
+
+
+    
+    // newGameBtn1.onclick = function(){
+    //     window.location.reload();
+    // }
     
