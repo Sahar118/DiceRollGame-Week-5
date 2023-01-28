@@ -151,20 +151,3 @@ const gameOve = holdBtn.addEventListener('click', function(){
     newGameBtn.addEventListener('click', startNewGame);
     
     
-    
-
-// modal
-// const button = document.querySelector('#button-start-game-modal') 
-const sound = audio.addEventListener('click',turnOff){
-    
-    const audio = document.querySelector('audio');
-    function turnOff(){
-       if(audio.includes('turn-off-sound')){
-          audio.stop();
-       }
-       else{
-        audio.play();
-       }
-    }
-}
-audio.addEventListener('click',turnOff);

@@ -13,39 +13,76 @@
 
 <body>
 
+    <!-- modal  -->
+    <div class="modal hidden" >
+        <button class="close-modal">&times; </button>
+    
+        <h2>Game Instructions:</h2>
+        <!-- <div class="modal-body"> -->
+            <ul>
+                <li id="li-p1">In your turn - roll the dice (at least once) and accumulate the result in "current"</li>
+                <li id="li-p1">You can roll again or click "Hold" to save the points from "Current" and end the turn. </li>
+                <li id="li-p1">Note! if you get 6-6 - you will lose all points from "current" and the turn will go to your opponent </li>
+                <li id="li-p1">If you managed to reach exactly the target score - you win! if you passed it - you loose ....</li>
+            </ul>
+
+            
+            <!-- </div> -->
+            
+            <!-- <div class="modal-footer"> -->
+                <!-- <h2>Please select a target score</h2>
+                <input type="number" id="input-target-score-p1" min="2" max="1000"></input>
+                <button id="button-send" type="submit"></button> -->
+    
+                <!-- <form name="myForm" >
+    
+                    <input id="number" type="number" name="number" required>
+                    <input id="startGame" type="submit" value=" START GAME 🎲" href="#"> 
+                  </form>
+                   -->
+                <!-- </div> -->
+                
+            </div>
+                <div class="overlay hidden"></div>
+    </div>
+                
+
         <!-- Player 1 side -->
-        <section class="player-0-div player-active">
-            <div id="top-div">
-                <p id="players">PLAYER 1</p>
-                <p id="score-player-0"></p>
-            </div>
+        <div class="container">
 
-            <div id="bottom-div">
-                <p id="current">current</p>
-                <p id="score-current-player-0">0</p>
-            </div>
-            <div class="win-div">
-                <div id="win">Win:</div>
-                <div id="winCount-0">0</div>
-            </div>
-        </section>
-
-        <!-- Player 2 side -->
-            <section class="player-1-div">
-                    <div id="top-div">
-                        <p id="players">PLAYER 2</p>
-                        <p id="score-player-1">0</p>
-                    </div>
-        
-                    <div id="bottom-div">
-                        <p id="current">current</p>
-                        <p id="score-current-player-1"></p>
-                    </div>
-                    <div class="win-div">
-                        <div id="win">Win:</div>
-                        <div id="winCount-1">0</div>
-                    </div>
+            <section class="player-0-div player-active">
+                <div id="top-div">
+                    <p id="players">PLAYER 1</p>
+                    <p id="score-player-0"></p>
+                </div>
+    
+                <div id="bottom-div">
+                    <p id="current">current</p>
+                    <p id="score-current-player-0">0</p>
+                </div>
+                <div class="win-div">
+                    <div id="win">Win:</div>
+                    <div id="winCount-0">0</div>
+                </div>
             </section>
+    
+            <!-- Player 2 side -->
+                <section class="player-1-div">
+                        <div id="top-div">
+                            <p id="players">PLAYER 2</p>
+                            <p id="score-player-1">0</p>
+                        </div>
+            
+                        <div id="bottom-div">
+                            <p id="current">current</p>
+                            <p id="score-current-player-1"></p>
+                        </div>
+                        <div class="win-div">
+                            <div id="win">Win:</div>
+                            <div id="winCount-1">0</div>
+                        </div>
+                </section>
+        </div>
 
         <div id="middle-container">
             <img src="/img/dice/dice-1.png" id="dice-top" class="dice">
@@ -53,9 +90,11 @@
             <button id="new-game">🔁New Game</button>
             <button id="roll-dice">🎲 Roll Dice</button>
             <button id="hold"> ⏹️ Hold</button>
-            <button class="sounds turn-on-sound">🔊</button>
-            <button class="sounds turn-off-sound">🔈</button>
+            <!-- <button class="sounds turn-on-sound" onclick="playAudio('/audio/mixkit-bonus-earned-in-video-game-2058.wav')">🔊</button>
+            <button class="sounds turn-off-sound" onclick="stopAudio()">🔈</button> -->
         </div>
+
+
 
 
         <script src="./script.js"></script>
