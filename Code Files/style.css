@@ -22,6 +22,8 @@ body {
     height: 100%; 
     width: 35%; 
     opacity: 0.4;
+
+
     background: linear-gradient(135deg,rgb(214, 180, 186) 30%,rgb(203, 162, 170) 70%);
 }
 .player-1-div{
@@ -113,6 +115,8 @@ button{
     opacity: 0.8;
     border: none;
     padding: 10% 10%;
+    cursor: pointer;
+
 }
 
 #dice-top{
@@ -142,10 +146,8 @@ img{
 .winner{
     background: black;
     opacity: 1;
-    color: yellowgreen;
     color: red;
     font-weight: 700;
-
 }
 
 .player-active{
@@ -155,3 +157,79 @@ opacity: 1;
 .hidden{
     display: none;
 }
+
+.win-div{
+    border-radius: 70px;
+    border: 2px solid black;
+    padding: 10px ;
+    width: 60px;
+    font-size: 15px;
+    position: relative;
+    left: 40%;
+}
+
+.sounds{
+    /* background: none; */
+    height: 10px;
+}
+
+
+
+
+/* modal */
+.modal-content {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:palevioletred;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    right: -200px;
+    z-index: 2;
+
+}
+/* Modal Header */
+.modal-header {
+    /* margin-left: 20px; */
+  }
+  
+
+  .modal-footer {
+    padding: 2px 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  h2{
+    color: black;
+  }
+
+  #input-target-score-p1, #button-start-game-modal{
+    width:200px;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+  }
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
