@@ -46,7 +46,6 @@ startGameBtn.addEventListener("click", function (e) {
     targetScore = document.getElementById("targetScore").valueAsNumber;
 });
 
-newGameBtn.addEventListener('click', startNewGame);
 
 let score, playerNum, currentScore1, playingStatus, targetScore;
 const startNewGame = function (){
@@ -168,6 +167,7 @@ const gameOve = holdBtn.addEventListener('click', function(){
         }
         
     }})
+    newGameBtn.addEventListener('click', startNewGame);
 
 
 
