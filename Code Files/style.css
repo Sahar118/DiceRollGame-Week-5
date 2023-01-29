@@ -141,14 +141,14 @@ left: 10%;
     position: absolute;
     transition: rotate(360deg);
 }
-@keyframes animate3 {
-    from {
-      transform: rotate(0deg);
+    @keyframes animate3 {
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(360deg);
+        }
     }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
 #middle-container{
     display: flex;
@@ -166,7 +166,6 @@ button{
     opacity: 0.7;
     border-radius: 20px;
     border: none;
-    /* background-color: transparent; */
     padding: 10% 10%;
     cursor: pointer;
     position: relative;
@@ -174,13 +173,13 @@ button{
 }
 
 @keyframes animate2 {
-    from {
-      transform: rotate(0deg);
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(360deg);
+        }
     }
-    to {
-      transform: rotate(360deg);
-    }
-  }
 
 
 #dice-top{
@@ -250,98 +249,32 @@ opacity: 1;
 }
 
 
-@keyframes animate1 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.sounds{
-    /* background: none; */
-    height: 10px;
-}
-
-
-/* modal */
-    .hidden{
-        display:block;
+    @keyframes animate1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
     }
 
-    .modal{
-        position:fixed;
-        top: 3.50rem;
-        left: 14.5rem;
-        width: 67%;
-        height: 78%;
-        background-color: #fb7185;
-        border-radius: 5px;
-        box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-        z-index: 3;
-    }
-
-    .modal-body{
-        line-height: 270%;
-        padding-left: 5%;
-    }
-    .game-inst{
-        text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 2rem;
-    }
-
-   h3{
-    margin-bottom: 2rem;
-   }
-    .modal-footer{
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    #targetScore{
-        margin-bottom: 1rem;
-        text-align: center;
-        padding: .75%;
-    }
-#letStart{
-    height: 1%;
-    width: 15%;
-    margin: 5px;
-    padding: 10px;
-    font-size: 10px; 
-    display: flex;
+.double-6,
+.double-3
+{
+    display: none;
+    position:absolute;
+    background-color:#fb7185;
+    height: 10%;
+    width: 65%;
+    left: 19%;
+    top: 40%;
+    z-index: 2;
     text-align: center;
+    font-size: 200%;
+    border-radius: 20px;
 }
 
-@media (max-width:800px) {
-    #middle-container{
-        display: flex;
-        flex-direction: row;
-        height: 20%;
-        width: 20%;
-        position: relative;
-        top: 2%;
-    }
-
-    #dice-top{
-        height:30%;
-        width: 75%;
-        background-color: white;
-        position: relative;
-        left: -25%;
-
-    }
-    
-    #dice-bottom{
-        height:30%;
-        width: 75%;
-        position: relative;
-        left: -20%;
-        background-color: white;
-    }
+.double-3{
+    left: 19%;
+    top: 30%;
 }

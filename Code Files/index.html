@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./modal.css">
+    <link rel="stylesheet" href="./responsive.css">
     <title>Dice Game</title>
 
 </head>
 
 <body>
 
-    <!-- modal  -->
+    <!-- ╰(*°▽°*)╯ modal  -->
 
     <div id="myModal" class="modal hidden">
         <div class="modal-content" >
             <div class="modal-header">
-              <span class="close">&times;</span>
-              <h2 class="game-inst">Game Instructions:</h2>
+            <span class="close">&times;</span>
+            <h2 class="game-inst">Game Instructions:</h2>
             </div>
             <div class="modal-body">
                 <ul>
@@ -29,19 +31,21 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <h3>Please select a target score</h3>
-                <input type="number" id="'targetScore'" name="targetScore" min="20" max="1000" value="20" autofocus onblur="getVal()">
+                <label for="targetScore">Target Score:</label>
+                <input class="input-target" type="number" id="targetScore" name="targetScore" value="100" />
                 <button id="letStart" id="button-start-game-modal">🎲  START GAME </button>
-          </div> 
+            </div> 
         </div>
     </div>
-
-        <!-- Player 1 side -->
+    <!-- Span - DOUBLUE ( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°) -->
+    <span class="double-6">OoOoOoPS YOU GET 6-6 😕😕</span>
+    <span class="double-3">OoOoOoPS YOU GET 3-3 😕😕</span>
+        <!-- (❁´◡`❁) Player 1 side -->
         <div class="container">
 
             <section class="player-0-div player-active">
                 <div id="top-div">
-                    <div class="player-0-won-text textHidden">YOU WIN!!! 🎉</div>
+                    <div class="player-0-won-text textHidden">YOU WON!!! 🎉</div>
                     <p id="players">PLAYER 1</p>
                     <p id="score-player-0"></p>
                 </div>
@@ -56,10 +60,10 @@
                 </div>
             </section>
     
-            <!-- Player 2 side -->
+            <!--(●'◡'●) Player 2 side -->
                 <section class="player-1-div">
                         <div id="top-div">
-                            <div class="player-1-won-text textHidden">YOU WIN!!! 🎉</div>
+                            <div class="player-1-won-text textHidden">YOU WON!!! 🎉</div>
                             <p id="players">PLAYER 2</p>
                             <p id="score-player-1">0</p>
                         </div>
@@ -76,7 +80,6 @@
         </div>
 
         <div id="middle-container">
-            
             <button id="new-game">🔁New Game</button>
             <img src="/img/dice/dice-1.png" id="dice-top" class="dice">
             <img src="/img/dice/dice-1.png" id="dice-bottom" class="dice">
